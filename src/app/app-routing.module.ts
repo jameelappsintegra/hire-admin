@@ -17,7 +17,10 @@ const routes: Routes = [
       {
         path: 'job-create',
         component: JobOpeningsCreateComponent, // another child route component that the router renders
-      }]
+      },
+      { path: '', redirectTo: 'job-list', pathMatch: 'full' },
+      { path: '**', redirectTo: 'job-list', pathMatch: 'full' }
+    ]
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }

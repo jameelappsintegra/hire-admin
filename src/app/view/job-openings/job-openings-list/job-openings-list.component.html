@@ -1,6 +1,19 @@
-<div class="page-header">
+<div class="page-header shadow-sm d-flex align-items-center">
   <h6>Current Opportunities</h6>
   <button class="btn btn-primary btn-sm" [routerLink]="['../job-create']">
-    Create New Job
+    Create New Job <i class="fa fa-plus"></i>
   </button>
+</div>
+<div class="container">
+  <div class="sort-filter">
+    <div class="sort">Sort by:</div>
+    <div class="filter">Filter</div>
+  </div>
+  <div class="job-list">
+    <div class="card" *ngFor="let item of currentOpenings">
+      <div class="card-body">
+        <h6>{{ item.jobName }}</h6>
+      </div>
+    </div>
+  </div>
 </div>
