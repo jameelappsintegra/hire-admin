@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #645df9;
+  --btn-primary: #001d4a;
+  --border-radius: 4px;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9375rem;
+}
+.navbar {
+  background-color: var(--primary);
+  .navbar-nav {
+    .nav-item {
+      color: var(--light);
+      font-weight: 400;
+      &.active {
+        color: var(--light);
+        font-weight: 500;
+      }
+    }
+  }
+}
