@@ -12,7 +12,29 @@
   <div class="job-list">
     <div class="card" *ngFor="let item of currentOpenings">
       <div class="card-body">
-        <h6>{{ item.jobName }}</h6>
+        <div
+          class="job-list-card d-flex justify-content-between align-items-center"
+        >
+          <div>
+            <h6>{{ item.jobName }}</h6>
+            <span>{{ item.location }}</span>
+          </div>
+          <div class="end-date">end date</div>
+          <div class="recruitment-status">
+            <div>12</div>
+            <div>12</div>
+            <div>12</div>
+            <div>12</div>
+            <div>12</div>
+            <div>12</div>
+          </div>
+          <div class="communication">
+            <div class="mail">mail</div>
+            <div class="message">message</div>
+            <div class="message-sent">message sent</div>
+          </div>
+          <div class="option">option</div>
+        </div>
       </div>
     </div>
   </div>

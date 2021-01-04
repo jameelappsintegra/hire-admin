@@ -22,13 +22,15 @@ body {
     }
   }
 }
-
+.btn {
+  border: 0;
+  &.btn-primary {
+    background-color: #001d4a;
+  }
+}
 .container {
   padding: 0 2%;
   max-width: 100%;
-}
-.btn-primary {
-  background-color: #001d4a;
 }
 .page-header {
   display: flex;

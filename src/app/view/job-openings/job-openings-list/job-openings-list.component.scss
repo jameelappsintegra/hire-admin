@@ -7,5 +7,13 @@
 .job-list {
   .card {
     margin: 0 0 10px 0;
+    .job-list-card {
+      .recruitment-status {
+        display: flex;
+      }
+      .communication {
+        display: flex;
+      }
+    }
   }
 }
