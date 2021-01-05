@@ -4,6 +4,7 @@
     width: 38px;
     height: 38px;
     border-radius: 50%;
+    margin-right: 3px;
   }
   .profile-name {
     display: flex;
@@ -14,21 +15,77 @@
   position: relative;
   .badge {
     position: absolute;
-    top: 0;
+    top: 4px;
     background-color: var(--btn-primary);
-    right: 0;
+    right: 10px;
     border-radius: var(--border-radius-6);
+    color: var(--white);
+    font-weight: 400;
+    font-size: 0.6rem;
   }
 }
 .nav-link {
   .dropdown-menu {
     width: 290px;
+    padding: 10px;
+    .notification-header {
+      color: #000000;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
     .dropdown-item {
       white-space: pre-wrap;
-      padding: 0.25rem 0.9rem;
+      padding: 0.25rem 0rem;
+      display: flex;
+      .notify-img {
+        position: relative;
+        img {
+          border-radius: 50%;
+          object-fit: cover;
+          border: 1px solid #645df9;
+        }
+        .notify-catagory {
+          position: absolute;
+          bottom: 14px;
+          background: var(--btn-primary);
+          color: #fff;
+          padding: 2px;
+          border-radius: 50%;
+          right: 0;
+          width: 15px;
+          height: 15px;
+          .fa {
+            font-size: 10px;
+            display: block;
+          }
+        }
+      }
+      .notification-copy {
+        padding-left: 10px;
+        position: relative;
+        .unread {
+          position: absolute;
+          right: 0;
+          border-radius: 50%;
+          bottom: 23%;
+          background: var(--primary);
+          width: 10px;
+          height: 10px;
+        }
+      }
+      p {
+        color: #6e6e6e;
+        margin: 0;
+        font-size: 0.7rem;
+      }
+      .notification-time {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 0.5rem;
+      }
     }
     .dropdown-divider {
-      margin: 0.5rem 1.5rem;
+      margin: 0;
     }
   }
 }
