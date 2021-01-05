@@ -1,10 +1,15 @@
 :root {
   --primary: #645df9;
+  --primary-text: #001d4a;
   --btn-primary: #001d4a;
   --border-radius-4: 4px;
   --border-radius-6: 6px;
   --page-bg: #f5f5f5;
   --border-color: #e2e2e2;
+  --screening: #6e6e6e;
+  --submission: #ffcd86;
+  --offered: #14b5d0;
+  --hired: #18c505;
 }
 * {
   margin: 0;
@@ -75,24 +80,24 @@ body {
   margin: 0 3px;
 }
 .screening-outline {
-  border: 1px solid #6e6e6e;
-  color: #6e6e6e;
+  border: 1px solid var(--screening);
+  color: var(--screening);
 }
 .submissions-outline {
-  border: 1px solid #ffcd86;
-  color: #ffcd86;
+  border: 1px solid var(--submission);
+  color: var(--submission);
 }
 .interview-outline {
-  border: 1px solid #645df9;
-  color: #645df9;
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 .offered-outline {
-  border: 1px solid #14b5d0;
-  color: #14b5d0;
+  border: 1px solid var(--offered);
+  color: var(--offered);
 }
 .hired-outline {
-  border: 1px solid #18c505;
-  color: #18c505;
+  border: 1px solid var(--hired);
+  color: var(--hired);
 }
 .pi-page-wrapper {
   background-color: var(--white);
