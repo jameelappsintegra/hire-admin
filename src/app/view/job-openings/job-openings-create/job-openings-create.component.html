@@ -1,1 +1,71 @@
-<p>job-openings-create works!</p>
+<div class="pi-page-wrapper job-opening-create"> 
+    <div class="d-flex bg-white flex-nowrap">
+        <div class="create-opportunity-left-content border-right"> 
+            <div class="create-opportunity-wizard-header border-bottom">
+                <div class="">
+                    <div class="row mt-2">
+                        <div class="col-auto align-self-center breadcrumbs">
+                            <div class="pl-4">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-home home-icon"></i>
+                                    <span class="dot"><i class="fa fa-circle"></i></span>
+                                    <label>Create Opportunity</label>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="col">
+                            <ul class="nav nav-pills mb-0" id="tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="the-job" data-toggle="pill"
+                                        href="#pills-the-job" role="tab" aria-controls="pills-the-job"
+                                        aria-selected="true"><span class="count">1</span> 
+                                        <span class="label">The Job</span>
+                                        </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="application-form" data-toggle="pill"
+                                        href="#pills-application-form" role="tab" aria-controls="pills-application-form"
+                                        aria-selected="false"><span class="count">2</span><span class="label">Application Form</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="work-flow" data-toggle="pill"
+                                        href="#pills-work-flow" role="tab" aria-controls="pills-work-flow"
+                                        aria-selected="false"><span class="count">3</span><span class="label">Work Flow</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="find-candidate" data-toggle="pill"
+                                        href="#pills-find-candidate" role="tab" aria-controls="pills-find-candidate"
+                                        aria-selected="false"><span class="count">4</span><span class="label">Find Candidate</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="create-opportunity-wizard-content">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-the-job" role="tabpanel"
+                        aria-labelledby="the-job">
+                            <app-the-job></app-the-job>
+                    </div>
+                    <div class="tab-pane fade" id="pills-application-form" role="tabpanel"
+                        aria-labelledby="application-form">
+                        <app-the-job></app-the-job>
+                    </div>
+                    <div class="tab-pane fade" id="pills-work-flow" role="tabpanel"
+                        aria-labelledby="work-flow">
+                        <app-the-job></app-the-job>
+                    </div>
+                    <div class="tab-pane fade" id="pills-find-candidate" role="tabpanel"
+                        aria-labelledby="find-candidate">
+                        <app-the-job></app-the-job>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="create-opportunity-right-content">
+
+        </div>
+    </div>
+   
+</div>
