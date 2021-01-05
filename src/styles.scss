@@ -13,6 +13,7 @@
   --hired: #18c505;
 }
 * {
+  outline: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -57,11 +58,29 @@ body {
   max-width: 100%;
 }
 .page-header {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
   background-color: var(--light);
+  .nav-tabs {
+    border: 0;
+    transition: all 0.2s ease;
+    .nav-link {
+      &:hover,
+      &:focus {
+        border-color: transparent;
+      }
+    }
+  }
+  a {
+    color: #828894;
+  }
+  .active {
+    border-bottom: 2px solid #645df9;
+    a {
+      color: #000;
+      font-weight: 600;
+    }
+  }
   h6 {
     margin: 0;
   }
