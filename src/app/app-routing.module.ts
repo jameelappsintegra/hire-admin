@@ -22,8 +22,8 @@ const routes: Routes = [
       { path: '**', redirectTo: 'job-list', pathMatch: 'full' }
     ]
   },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({

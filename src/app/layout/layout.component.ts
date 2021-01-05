@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  isHeaderEnable: any;
+
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+    this.router.events
+      .subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          console.log(event);
+          
+          this.isHeaderEnable = (event.url !== '/job-openings/job-create')
+        }
+      });
   }
 
 }
