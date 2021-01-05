@@ -1,13 +1,33 @@
 <div class="page-header shadow-sm d-flex align-items-center">
-  <h6>Current Opportunities</h6>
+  <h6>Current opportunities</h6>
   <button class="btn btn-primary btn-sm" [routerLink]="['../job-create']">
-    Create New Job <i class="fa fa-plus"></i>
+    Create New Job <i class="las la-plus"></i>
   </button>
 </div>
 <div class="container">
   <div class="sort-filter">
-    <div class="sort">Sort by:</div>
-    <div class="filter">Filter</div>
+    <div class="sort">
+      Sort by
+      <div class="dropdown">
+        <span
+          class="dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Tasks
+        </span>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+      <i class="las la-arrow-down"></i>
+    </div>
+    <div class="filter">Filter <input type="text" class="filter-input" /></div>
   </div>
   <div class="job-list">
     <div class="card" *ngFor="let item of currentOpenings">
@@ -15,25 +35,41 @@
         <div
           class="job-list-card d-flex justify-content-between align-items-center"
         >
-          <div>
+          <div class="job-info">
             <h6>{{ item.jobName }}</h6>
-            <span>{{ item.location }}</span>
+            <span class="location">{{ item.location }}</span>
           </div>
-          <div class="end-date">end date</div>
+          <div class="end-date">
+            <div class="progress"></div>
+            <div>
+              <span>End Date</span>
+              <span>10 Dec 2020</span>
+            </div>
+          </div>
           <div class="recruitment-status">
-            <div>12</div>
-            <div>12</div>
-            <div>12</div>
-            <div>12</div>
-            <div>12</div>
-            <div>12</div>
+            <div class="progress-indicator screening-outline">12</div>
+            <div class="progress-indicator submissions-outline">12</div>
+            <div class="progress-indicator interview-outline">12</div>
+            <div class="progress-indicator offered-outline">12</div>
+            <div class="progress-indicator hired-outline">12</div>
           </div>
           <div class="communication">
-            <div class="mail">mail</div>
-            <div class="message">message</div>
-            <div class="message-sent">message sent</div>
+            <div class="mail">
+              <img src="../../../../assets/img/mail.svg" />2
+            </div>
+            <div class="message">
+              <img src="../../../../assets/img/message.svg" />1500
+            </div>
+            <div class="message-sent">
+              <img src="../../../../assets/img/message-sent.svg" />25
+            </div>
+            <div class="share">
+              <img src="../../../../assets/img/share.svg" />1
+            </div>
           </div>
-          <div class="option">option</div>
+          <div class="option">
+            <i class="las la-ellipsis-h la-2x"></i>
+          </div>
         </div>
       </div>
     </div>

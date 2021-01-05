@@ -1,11 +1,18 @@
 :root {
   --primary: #645df9;
   --btn-primary: #001d4a;
-  --border-radius: 4px;
+  --border-radius-4: 4px;
+  --border-radius-6: 6px;
   --page-bg: #f5f5f5;
+  --border-color: #e2e2e2;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.9375rem;
   background-color: var(--page-bg);
 }
@@ -14,10 +21,9 @@ body {
   .navbar-nav {
     .nav-item {
       color: var(--light);
-      font-weight: 400;
       &.active {
         color: var(--light);
-        font-weight: 500;
+        font-weight: 600;
       }
     }
   }
@@ -25,7 +31,7 @@ body {
 .btn {
   border: 0;
   &.btn-primary {
-    background-color: #001d4a;
+    background-color: var(--btn-primary);
   }
 }
 .container {
@@ -38,4 +44,36 @@ body {
   justify-content: space-between;
   padding: 1%;
   background-color: var(--light);
+  h6 {
+    margin: 0;
+  }
+}
+.progress-indicator {
+  width: 39px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-6);
+  margin: 0 3px;
+}
+.screening-outline {
+  border: 1px solid #6e6e6e;
+  color: #6e6e6e;
+}
+.submissions-outline {
+  border: 1px solid #ffcd86;
+  color: #ffcd86;
+}
+.interview-outline {
+  border: 1px solid #645df9;
+  color: #645df9;
+}
+.offered-outline {
+  border: 1px solid #14b5d0;
+  color: #14b5d0;
+}
+.hired-outline {
+  border: 1px solid #18c505;
+  color: #18c505;
 }
