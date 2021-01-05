@@ -1,0 +1,103 @@
+.settings {
+  display: flex;
+  height: calc(100vh - 72px);
+  .sidenav {
+    background-color: var(--secondary);
+    li {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      min-width: 90px;
+      transition: all 0.3s ease;
+      &.active,
+      &:hover {
+        border-left: 2px solid var(--primary);
+        a {
+          color: var(--light);
+        }
+      }
+      a {
+        color: #828894;
+        &:hover {
+          text-decoration: none;
+          color: var(--light);
+        }
+      }
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.settings-container {
+  display: flex;
+  margin: 10px 0;
+  font-size: 0.8rem;
+  background-color: var(--light);
+  .side-navigation {
+    min-width: 250px;
+    .settings-menu {
+      li {
+        border-bottom: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-color);
+        margin-bottom: -1px;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        align-items: center;
+        font-weight: 600;
+        a {
+          transition: all 0.2s ease;
+          color: var(--gray);
+          &.active,
+          &:hover {
+            color: var(--dark);
+          }
+        }
+
+        i {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  .setting-title {
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.7rem;
+    margin: 10px 0;
+    padding: 10px 0;
+    color: #6e6e6e;
+  }
+  .setting-details {
+    display: flex;
+    .company-details {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+    .map-container {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
+  label {
+    color: #6e6e6e;
+    display: flex;
+    align-items: center;
+    i {
+      padding-right: 5px;
+      color: var(--secondary);
+    }
+  }
+  span {
+    font-weight: 600;
+  }
+}

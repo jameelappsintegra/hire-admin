@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './view/dashboard/dashboard.component';
+import { GeneralSettingsComponent } from './view/general-settings/general-settings.component';
+import { JobDescriptionComponent } from './view/job-openings/job-description/job-description.component';
 import { JobOpeningsCreateComponent } from './view/job-openings/job-openings-create/job-openings-create.component';
 import { JobOpeningsLandingComponent } from './view/job-openings/job-openings-landing/job-openings-landing.component';
 import { JobOpeningsListComponent } from './view/job-openings/job-openings-list/job-openings-list.component';
@@ -18,9 +20,15 @@ const routes: Routes = [
         path: 'job-create',
         component: JobOpeningsCreateComponent, // another child route component that the router renders
       },
+      {
+        path: 'job-description', component: JobDescriptionComponent
+      },
       { path: '', redirectTo: 'job-list', pathMatch: 'full' },
       { path: '**', redirectTo: 'job-list', pathMatch: 'full' }
     ]
+  },
+  {
+    path: 'general-settings', component: GeneralSettingsComponent
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }

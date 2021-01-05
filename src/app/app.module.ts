@@ -10,6 +10,8 @@ import { JobOpeningsListComponent } from './view/job-openings/job-openings-list/
 import { DashboardComponent } from './view/dashboard/dashboard.component';
 import { JobOpeningsCreateComponent } from './view/job-openings/job-openings-create/job-openings-create.component';
 import { JobOpeningsLandingComponent } from './view/job-openings/job-openings-landing/job-openings-landing.component';
+import { GeneralSettingsComponent } from './view/general-settings/general-settings.component';
+import { JobDescriptionComponent } from './view/job-openings/job-description/job-description.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { JobOpeningsLandingComponent } from './view/job-openings/job-openings-la
     JobOpeningsListComponent,
     DashboardComponent,
     JobOpeningsCreateComponent,
-    JobOpeningsLandingComponent
+    JobOpeningsLandingComponent,
+    GeneralSettingsComponent,
+    JobDescriptionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 :root {
   --primary: #645df9;
+  --secondary: #001d4a;
   --primary-text: #001d4a;
   --btn-primary: #001d4a;
   --border-radius-4: 4px;
@@ -16,10 +17,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul,
+li {
+  list-style: none;
+  margin: 0;
+}
+a:hover {
+  text-decoration: none;
+}
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9375rem;
   background-color: var(--page-bg);
+  min-height: 100vh;
+}
+.pointer {
+  cursor: pointer;
 }
 .navbar {
   background-color: var(--primary);

@@ -16,6 +16,17 @@
       display: flex;
       margin: 0 12px;
     }
+    .dropdown-item {
+      font-size: 0.8rem;
+      padding: 0.45rem 0.7rem;
+    }
+    .sortby-search {
+      border: 0;
+      border-bottom: 1px solid var(--border-color);
+      &:focus {
+        outline: none;
+      }
+    }
   }
   .filter-input {
     background-color: transparent;

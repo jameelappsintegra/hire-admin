@@ -25,7 +25,6 @@
       <a href="#" class="nav-item nav-link">Candidates</a>
       <a href="#" class="nav-item nav-link">Emails</a>
       <a href="#" class="nav-item nav-link">Assessments</a>
-      <a href="#" class="nav-item nav-link">Clients</a>
       <a href="#" class="nav-item nav-link">Reports</a>
     </div>
     <div class="navbar-nav ml-auto d-flex align-items-center">
@@ -66,22 +65,36 @@
               </div>
             </div>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"
-              >Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore</a
-            >
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"
-              >Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore</a
-            >
+            <div class="dropdown-item">
+              <div class="notify-img">
+                <img
+                  src="../../../assets/img/Image-13.png"
+                  width="43"
+                  height="43"
+                  alt=""
+                />
+                <div class="notify-catagory">
+                  <i class="fa fa-comments-o" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="notification-copy">
+                <p>
+                  Lorem ipsum dolor sit amet, conse adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore
+                </p>
+                <div class="notification-time">2 Mins Ago</div>
+                <span class="unread"></span>
+              </div>
+            </div>
           </div>
         </div>
       </a>
       <a href="#" class="nav-item nav-link"
         ><i class="las la-history la-2x"></i
       ></a>
-      <a href="#" class="nav-item nav-link"><i class="las la-cog la-2x"></i></a>
+      <a [routerLink]="['/general-settings']" class="nav-item nav-link"
+        ><i class="las la-cog la-2x"></i
+      ></a>
       <a href="#" class="nav-item nav-link">
         <span class="nav-profile">
           <img src="../../../assets/img/profile-1.jpg" class="inline-block" />
