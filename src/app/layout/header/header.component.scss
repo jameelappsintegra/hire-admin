@@ -10,3 +10,25 @@
     flex-direction: column;
   }
 }
+.notification {
+  position: relative;
+  .badge {
+    position: absolute;
+    top: 0;
+    background-color: var(--btn-primary);
+    right: 0;
+    border-radius: var(--border-radius-6);
+  }
+}
+.nav-link {
+  .dropdown-menu {
+    width: 290px;
+    .dropdown-item {
+      white-space: pre-wrap;
+      padding: 0.25rem 0.9rem;
+    }
+    .dropdown-divider {
+      margin: 0.5rem 1.5rem;
+    }
+  }
+}
