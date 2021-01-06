@@ -1,0 +1,19 @@
+
+  ::ng-deep{
+    .min-max-range{
+      .ngx-slider-tick { 
+        display:none;
+        &:first-child, &:last-child {
+          display:block;
+        }
+        &:nth-child(150n) {
+          display:block;
+        }
+      }
+    }
+    .currency{
+        display: inline-flex;
+        align-items: center;
+    }
+  
+  }

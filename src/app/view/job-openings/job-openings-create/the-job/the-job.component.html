@@ -9,7 +9,6 @@
                         <div class="options">PICC</div>
                         <div class="options-desc">ParamInfo Computer Consultancy</div>
                     </label>
-
                 </div>
                 <div class="box-input-type-option">
                     <input type="checkbox" id="qicc" class="box-input">
@@ -21,7 +20,245 @@
                 </div>
             </div>
         </div>
+        <div>
+            <label class="wizard-questions">Select the job's criticality.</label>
+            <div class="box-input-type-container">
+                <div class="box-input-type-option">
+                    <input type="checkbox" id="Simple" class="box-input">
+                    <label for="Simple" class="box-input-label">
+                        <div class="options">Simple</div>
+                    </label>
 
+                </div>
+                <div class="box-input-type-option">
+                    <input type="checkbox" id="Normal" class="box-input">
+                    <label for="Normal" class="box-input-label">
+                        <div class="options">Normal</div>
+                    </label>
+
+                </div>
+                <div class="box-input-type-option">
+                    <input type="checkbox" id="Critical" class="box-input">
+                    <label for="Critical" class="box-input-label">
+                        <div class="options">Critical</div>
+                    </label>
+
+                </div>
+                <div class="box-input-type-option">
+                    <input type="checkbox" id="very-Critical" class="box-input">
+                    <label for="very-Critical" class="box-input-label">
+                        <div class="options">Very Critical</div>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <label class="wizard-questions">For which Client you are hiring for?</label>
+            <div class="form-group">
+                <div class="btn-group w-100">
+                    <button type="button" class="btn input-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fas fa-building"></i> Select your client
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right w-100 p-0">
+                        <div class="dropdown-item py-0 my-2">
+                            <div class="d-flex border-bottom pb-2 px-2">
+                                <div class="option-img mr-2">
+                                    <img src="../../../../../assets/img/Image-12.png" alt="emmar" class="option-img">
+                                </div>
+                                <div class="option-content">
+                                    <h5>Emmar Properties</h5>
+                                    <small>Location : Dubai</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item py-0 my-2">
+                            <div class="d-flex pb-2 px-2">
+                                <div class="option-img mr-2">
+                                    <img src="../../../../../assets/img/Image-12.png" alt="emmar" class="option-img">
+                                </div>
+                                <div class="option-content">
+                                    <h5>Emmar Properties</h5>
+                                    <small>Location : Dubai</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item py-0 my-2">
+                            <div class="d-flex border-bottom pb-2 px-2 ">
+                                <div class="option-img mr-2">
+                                    <img src="../../../../../assets/img/Image-12.png" alt="emmar" class="option-img">
+                                </div>
+                                <div class="option-content">
+                                    <h5>Emmar Properties</h5>
+                                    <small>Location : Dubai</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <label class="wizard-questions">Enter the Job Name.</label>
+            <div class="form-group">
+                <input type="text" class="form-control input-border-bottom">
+            </div>
+        </div>
+        <div>
+            <label class="wizard-questions">Opening Start Date.</label>
+            <div class="form-group">
+                <input type="text" class="form-control input-border-bottom" bsDatepicker
+                    [bsConfig]="{ isAnimated: true, adaptivePosition: true,dateInputFormat: 'DD MMM YYYY' }">
+            </div>
+        </div>
+        <div>
+            <div class="form-group">
+                <label class="wizard-questions">Notice Period</label>
+                <div class="row custom-slider experiences">
+                    <div class="col-md-10">
+                        <ngx-slider [(ngModel)]="workExperiance" [options]="options"></ngx-slider>
+                    </div>
+                    <div class="col-md-2 align-self-center">
+                        <div class="row">
+                            <div class="col-4 col-md-9">
+                                <input type="text" class="form-control slider-input" [(ngModel)]="workExperiance" />
+                            </div>
+                            <div class="col-4 col-md-3 align-self-center p-0 muted-label">
+                                <small> Days </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <label class="wizard-questions">Select the required work experience.</label>
+                <div class="row custom-slider min-max-range experiences">
+                    <div class="col-md-12">
+                        <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="optionsMinMax"></ngx-slider>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-4">
+                    <div>
+                        <label class="wizard-questions">Currency</label>
+                        <div class="form-group">
+                            <div class="btn-group w-100">
+                                <button type="button" class="btn input-dropdown" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <img src="../../../../../assets/img/Image-12.png" alt="emmar"
+                                        class="option-img mr-2">
+                                    AED
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right w-100 p-0">
+                                    <div class="dropdown-item py-0 my-2 px-2">
+                                        <div class="d-flex border-bottom pb-2 px-2">
+                                            <div class=" mr-2">
+                                                <img src="../../../../../assets/img/Image-12.png" alt="emmar"
+                                                    class="option-img">
+                                            </div>
+                                            <div class="option-content currency">
+                                                <h5>AED</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item py-0 my-2 px-2">
+                                        <div class="d-flex pb-2 px-2">
+                                            <div class=" mr-2">
+                                                <img src="../../../../../assets/img/Image-12.png" alt="emmar"
+                                                    class="option-img">
+                                            </div>
+                                            <div class="option-content currency">
+                                                <h5>AED</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <label class="wizard-questions">Client Billing per Opening</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-border-bottom" placeholder="Enter Number">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="wizard-questions">Select the required Skills.</label>
+            <div class="row">
+                <div class="col-6 pr-0">
+                    <div> 
+                        
+                            <div class="btn-group w-100">
+                                <button type="button" class="btn input-dropdown" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-suitcase"></i>
+                                    Skill
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right w-100 p-0">
+                                    <div class="dropdown-item py-0 my-2 px-2">
+                                        <div class="d-flex border-bottom pb-2 px-2"> 
+                                            <div class="option-content currency py-2">
+                                                <h5>UI Developer</h5>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-item py-0 my-2 px-2">
+                                        <div class="d-flex border-bottom pb-2 px-2"> 
+                                            <div class="option-content currency py-2">
+                                                <h5>HTML</h5>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       
+                    </div>
+                </div>
+                <div class="col-2 pr-0">
+                         <input type="text" class="form-control input-border-bottom" placeholder="Year">
+                 </div>
+                <div class="col-2 pr-0">
+                     
+                        <input type="text" class="form-control input-border-bottom" placeholder="Month"> 
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-outline-secondary h-100 w-100"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div>
+                <label class="wizard-questions">Select the job's criticality.</label>
+                <div class="box-input-type-container yes-no"> 
+                    <div class="box-input-type-option">
+                        <input type="radio" name="yesNo" id="yes" class="box-input">
+                        <label for="yes" class="box-input-label">
+                            <div class="options">Yes</div>
+                        </label> 
+                    </div>
+                    <div class="box-input-type-option">
+                        <input type="radio" name="yesNo" id="no" class="box-input">
+                        <label for="no" class="box-input-label">
+                            <div class="options">No</div>
+                        </label> 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

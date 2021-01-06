@@ -1,5 +1,9 @@
 :root {
   --primary: #645df9;
+  --secondary: #6427F4;
+  --white: #ffffff;
+
+
   --primary-text: #001d4a;
   --btn-primary: #001d4a;
   --border-radius-4: 4px;
@@ -10,6 +14,19 @@
   --submission: #ffcd86;
   --offered: #14b5d0;
   --hired: #18c505;
+  
+}
+::placeholder {
+  color: #6427F4;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #6427F4;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #6427F4;
 }
 * {
   margin: 0;
@@ -21,6 +38,12 @@
     box-shadow: none;
   }
 }
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus{
+  box-shadow: none; 
+}
+
+
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9375rem;
@@ -51,10 +74,25 @@ body {
 }
 
 .btn {
-  border: 0;
+ 
+
   &.btn-primary {
     background-color: var(--btn-primary);
+    border-color: var(--btn-primary);
   }
+  &.btn-secondary {
+    background-color: var(--secondary); 
+    border-color: var(--secondary);
+  }
+  &.btn-outline-secondary {
+    color:var(--secondary);
+    border-color: var(--secondary);
+    &:hover{
+      color:var(--white);
+      background-color: var(--secondary);  
+    }
+}
+  
 }
 .container {
   padding: 0 2%;
@@ -103,10 +141,13 @@ body {
   background-color: var(--white);
   &.job-opening-create {
     .tab-container {
-      height: calc(100vh - 45px);
+      height: calc(100vh - 81px);
       display: flex;
+      overflow: auto;
+      padding-bottom: 20px;
+      flex-flow: wrap;
       .max-container {
-        max-width: 700px;
+        max-width: 609px;
       }
     }
   }
@@ -115,12 +156,23 @@ body {
   .wizard-questions {
     font-size: 14px;
     color: #000000;
-    margin-bottom: 15px;
+    margin-bottom: 9px;
 }
 }
 .box-input-type-container {
   display: flex;
   flex-wrap: wrap;
+  &.yes-no{ 
+    .box-input-type-option{
+      flex: 0 0 12%;
+      max-width: 12%;
+      .box-input-label { 
+        align-items: center;
+      }
+    }
+    
+
+    }
   .box-input-type-option {
     -webkit-box-flex: 0;
     flex: 0 0 33.33333333333333%;
@@ -129,9 +181,10 @@ body {
     display: inline-flex;
     padding-bottom: 10px;
     padding-right: 10px;
+   
     .box-input{
       display: none;
-      &:checked + .box-input-label {
+      &:checked + .box-input-label , &:hover + .box-input-label {
         background-color: #645df9;
         color:#ffffff;
         .options{
@@ -152,7 +205,7 @@ body {
       height: 100%;
      
       .options {
-        font-size: 25px;
+        font-size: 16px;
         font-weight: 500;
         color: #000000;
         line-height: 26px;
@@ -164,4 +217,206 @@ body {
     .box-input-type-content {
     }
   }
+}
+.input-dropdown{
+  background: #E1EBFF!important;
+  border-bottom: 1px solid #645DF9!important;
+  border-radius: 0px!important;
+  color: #645DF9!important;
+  font-size: 18px;
+  text-align: left;
+  padding: 8px 16px;
+  height: calc(1.5em + 0.75rem + 13px);
+  i{
+    color: #645DF9;
+    margin-right: 10px;
+  }
+}
+.option-img{
+  width: 34px;
+  height: 34px;
+}
+.option-content{
+  h5{
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 0px;
+    line-height: 13px;
+  
+  }
+  small{
+    color:#828894;
+    font-size: 12px;
+  }
+ 
+}
+.input-border-bottom{
+color:#645DF9;
+padding: 6px 16px;
+border: 0px;
+border-bottom: 1px solid #645DF9;
+border-radius: 0px;
+background-color: #E1EBFF;
+height: calc(1.5em + 0.75rem + 14px);
+&:focus{
+  border-bottom: 1px solid #645DF9;
+border-radius: 0px;
+background-color: #E1EBFF;
+color:#645DF9;
+}
+}
+.form-control:focus{
+  box-shadow: none;
+}
+// We need to use ::ng-deep to overcome view encapsulation
+.custom-slider {
+  &.min-max-range{
+    .ngx-slider-selection{
+      background: #001d4a!important;
+    }
+    .ngx-slider {
+      .ngx-slider-bar {
+        background: #E6E6E6;
+      }
+    }
+  }
+  .muted-label {
+    font-size: 14px;
+    color: #828894;
+  }
+  .slider-input {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .ngx-slider {
+    .ngx-slider-bar {
+      background: #001d4a;
+      height: 11px;
+      border-radius: 100px;
+    }
+    .ngx-slider-pointer {
+      width: 26px;
+      height: 26px;
+      top: auto;
+      bottom: -15px;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 4px #8c8c8c4d;
+    }
+    .ngx-slider-pointer:after {
+      display: none;
+    }
+    .ngx-slider-bubble {
+      bottom: 20px;
+      transition: 0.3s linear;
+      background: #000000;
+      color: #ffffff;
+      border-radius: 3px;
+      padding: 4px 11px;
+      &:after {
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        margin-left: -5px;
+        content: "";
+        display: block;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #000000;
+      }
+    }
+    .ngx-slider-limit {
+      display: none;
+    }
+    .ngx-slider-tick {
+      width: 1px;
+      height: 13px;
+      margin-left: 13px;
+      border-radius: 0;
+      background: #828894;
+      top: 15px;
+    }
+    .ngx-slider-tick-legend {
+      top: 15px;
+      color: #001d4a;
+      font-size: 11px;
+    }
+  }
+}
+.dropdown-item.active, .dropdown-item:active { 
+  background-color: #00000003;
+}
+.medium-text{
+  font-size: 17px;
+color:#000000;
+margin-bottom: 0px;
+}
+.small-text{
+  font-size: 13px;
+  color:#6E6E6E;
+}
+
+
+
+/* The container */
+.selecet-box {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.selecet-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.selecet-box:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.selecet-box input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.selecet-box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.selecet-box .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
