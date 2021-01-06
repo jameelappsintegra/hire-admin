@@ -1,1 +1,156 @@
-<p>job-openings-create works!</p>
+<div class="pi-page-wrapper job-opening-create">
+    <div class="d-flex bg-white flex-nowrap">
+        <div class="create-opportunity-left-content border-right">
+            <div class="create-opportunity-wizard-header border-bottom">
+                <div class="">
+                    <div class="row mt-2">
+                        <div class="col-auto align-self-center breadcrumbs">
+                            <div class="pl-4">
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="['../job-list']" class="home-icon"><i class="fa fa-home"></i></a>
+                                    <span class="dot"><i class="fa fa-circle"></i></span>
+                                    <label>Create Opportunity</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <ul class="nav nav-pills mb-0" id="tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link " id="the-job" data-toggle="pill" href="#pills-the-job"
+                                        role="tab" aria-controls="pills-the-job" aria-selected="true"><span
+                                            class="count">1</span>
+                                        <span class="label">The Job</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" id="application-form" data-toggle="pill"
+                                        href="#pills-application-form" role="tab" aria-controls="pills-application-form"
+                                        aria-selected="false"><span class="count">2</span><span
+                                            class="label">Application Form</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" id="work-flow" data-toggle="pill" href="#pills-work-flow"
+                                        role="tab" aria-controls="pills-work-flow" aria-selected="false">
+                                        <span  class="count">3</span><span class="label">Work Flow</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="find-candidate" data-toggle="pill"
+                                        href="#pills-find-candidate" role="tab" aria-controls="pills-find-candidate"
+                                        aria-selected="false"><span class="count">4</span><span class="label">Find
+                                            Candidate</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="create-opportunity-wizard-content">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade" id="pills-the-job" role="tabpanel" aria-labelledby="the-job">
+                        <app-the-job></app-the-job>
+                        <div class="job-opening-navigation job-opening-navigation text-right">
+                            <button class="btn btn-secondary mr-1">
+                                <i class="las la-angle-left"></i>
+                            </button>
+                            <button class="btn btn-secondary">
+                                <i class="las la-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade  show active" id="pills-application-form" role="tabpanel"
+                        aria-labelledby="application-form">
+                        <app-application-form></app-application-form>
+                    </div>
+                    <div class="tab-pane fade" id="pills-work-flow" role="tabpanel" aria-labelledby="work-flow">
+                        <app-work-flow></app-work-flow>
+                    </div>
+                    <div class="tab-pane fade" id="pills-find-candidate" role="tabpanel"
+                        aria-labelledby="find-candidate">
+                        <app-find-candidate></app-find-candidate>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="create-opportunity-right-content">
+            <div class="text-right">
+                <span class="close-icon">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+            <div class="job-details">
+                <h4 class="job-details-heading">Filled Job Details</h4>
+                <div class="job-details-accordion">
+                    <accordion [isAnimated]="true">
+                        <accordion-group>
+                            <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                                <div class="pull-left float-left">Process Details</div>
+                                <!-- <span class="badge badge-secondary float-right pull-right"><i class="fas fa-caret-down"></i></span> -->
+                            </button>
+                            <div>
+                                <div class="row job-details-content">
+                                    <div class="col-4">
+                                        <label class="label">Process Unit</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <span class="colon">: </span><label class="lable-value">PICC</label>
+                                    </div>
+                                </div>
+                                <div class="row job-details-content">
+                                    <div class="col-4">
+                                        <label class="label">Business Unit</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <span class="colon">: </span><label class="lable-value">IOC</label>
+                                    </div>
+                                </div>
+                                <div class="row job-details-content">
+                                    <div class="col-4">
+                                        <label class="label">Job Category</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <span class="colon">: </span><label class="lable-value">IOC</label>
+                                    </div>
+                                </div>
+                                <div class="row job-details-content">
+                                    <div class="col-4">
+                                        <label class="label">Criticality</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <span class="colon">: </span><label class="lable-value">IOC</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </accordion-group>
+                        <accordion-group>
+                            <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+                                <div class="pull-left float-left">Client Details</div>
+                                <!-- <span class="badge badge-secondary float-right pull-right"><i class="fas fa-caret-down"></i></span> -->
+                            </button>
+                            <div>
+                                <div class="row job-details-content">
+                                    <div class="col-4">
+                                        <label class="label">Client Name</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <span class="colon">: </span><label class="lable-value">PICC</label>
+                                    </div>
+                                </div>
+                                <div class="row job-details-content">
+                                    <div class="col-4">
+                                        <label class="label">Contact Details</label>
+                                    </div>
+                                    <div class="col-8">
+                                        <span class="colon">: </span><label class="lable-value">IOC</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </accordion-group>
+                        
+                    </accordion>
+                </div> 
+            </div>
+
+        </div>
+    </div>
+
+</div>
