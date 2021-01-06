@@ -55,15 +55,16 @@
           </div>
           <div class="end-date">
             <circle-progress
-              [percent]="50"
+              [percent]="30"
               [radius]="20"
-              [outerStrokeWidth]="2"
-              [innerStrokeWidth]="1"
+              [outerStrokeWidth]="5"
+              [space]="-5"
+              [innerStrokeWidth]="5"
               [outerStrokeColor]="'#39B54A'"
-              [innerStrokeColor]="'#C7E596'"
+              [innerStrokeColor]="'#F4F4F4'"
               [showUnits]="false"
               [showSubtitle]="false"
-              [showInnerStroke]="false"
+              [showInnerStroke]="true"
               [animation]="true"
               [animationDuration]="300"
             ></circle-progress>
