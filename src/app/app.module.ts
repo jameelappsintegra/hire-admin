@@ -10,9 +10,19 @@ import { JobOpeningsListComponent } from './view/job-openings/job-openings-list/
 import { DashboardComponent } from './view/dashboard/dashboard.component';
 import { JobOpeningsCreateComponent } from './view/job-openings/job-openings-create/job-openings-create.component';
 import { JobOpeningsLandingComponent } from './view/job-openings/job-openings-landing/job-openings-landing.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { FormsModule } from '@angular/forms';
 import { GeneralSettingsComponent } from './view/general-settings/general-settings.component';
 import { JobDescriptionComponent } from './view/job-openings/job-description/job-description.component';
 
+import { TheJobComponent } from './view/job-openings/job-openings-create/the-job/the-job.component';
+import { WorkFlowComponent } from './view/job-openings/job-openings-create/work-flow/work-flow.component';
+import { ApplicationFormComponent } from './view/job-openings/job-openings-create/application-form/application-form.component';
+import { FindCandidateComponent } from './view/job-openings/job-openings-create/find-candidate/find-candidate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +33,22 @@ import { JobDescriptionComponent } from './view/job-openings/job-description/job
     DashboardComponent,
     JobOpeningsCreateComponent,
     JobOpeningsLandingComponent,
+    TheJobComponent,
+    WorkFlowComponent,
+    ApplicationFormComponent,
+    FindCandidateComponent,
     GeneralSettingsComponent,
-    JobDescriptionComponent
+    JobDescriptionComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    TabsModule.forRoot(),
+    AccordionModule.forRoot(),
+    BsDatepickerModule.forRoot(),
+    NgxSliderModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
