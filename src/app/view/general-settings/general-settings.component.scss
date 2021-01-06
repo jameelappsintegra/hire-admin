@@ -2,7 +2,7 @@
   display: flex;
   height: calc(100vh - 72px);
   .sidenav {
-    background-color: var(--secondary);
+    background-color: var(--secondary-bg);
     li {
       min-height: 78px;
       display: flex;
@@ -73,15 +73,19 @@
   .setting-title {
     border-bottom: 1px solid var(--border-color);
     font-size: 0.7rem;
-    margin: 10px 0;
-    padding: 10px 0;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
     color: #6e6e6e;
+    font-weight: 700;
   }
   .setting-details {
     display: flex;
     .company-details {
       flex-basis: 50%;
       max-width: 50%;
+      .row {
+        margin-bottom: 10px;
+      }
     }
     .map-container {
       flex-basis: 50%;
@@ -94,10 +98,23 @@
     align-items: center;
     i {
       padding-right: 5px;
-      color: var(--secondary);
+      color: var(--secondary-bg);
     }
   }
   span {
     font-weight: 600;
+  }
+}
+
+.company-list {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-4);
+  padding: 10px;
+  .company-image {
+    img {
+      width: 105px;
+      height: 50px;
+    }
   }
 }

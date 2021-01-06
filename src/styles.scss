@@ -1,8 +1,7 @@
 :root {
   --primary: #645df9;
- 
 
-
+  --secondary-bg: #001d4a;
   --secondary: #001d4a;
   --primary-text: #001d4a;
   --btn-primary: #001d4a;
@@ -14,20 +13,22 @@
   --submission: #ffcd86;
   --offered: #14b5d0;
   --hired: #18c505;
-  --secondary: #6427F4;
+  --secondary: #6427f4;
   --white: #ffffff;
 }
 ::placeholder {
-  color: #6427F4;
+  color: #6427f4;
   opacity: 1; /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
- color: #6427F4;
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #6427f4;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
- color: #6427F4;
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #6427f4;
 }
 * {
   outline: none;
@@ -35,16 +36,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-.btn{
-  &:focus{
+.btn {
+  &:focus {
     box-shadow: none;
   }
 }
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus{
-  box-shadow: none; 
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
 }
-
-
 
 ul,
 li {
@@ -88,25 +89,22 @@ body {
 }
 
 .btn {
- 
-
   &.btn-primary {
     background-color: var(--btn-primary);
     border-color: var(--btn-primary);
   }
   &.btn-secondary {
-    background-color: var(--secondary); 
+    background-color: var(--secondary);
     border-color: var(--secondary);
   }
   &.btn-outline-secondary {
-    color:var(--secondary);
+    color: var(--secondary);
     border-color: var(--secondary);
-    &:hover{
-      color:var(--white);
-      background-color: var(--secondary);  
+    &:hover {
+      color: var(--white);
+      background-color: var(--secondary);
     }
-}
-  
+  }
 }
 .container {
   padding: 0 2%;
@@ -184,27 +182,25 @@ body {
     }
   }
 }
-.job-opening-create{
+.job-opening-create {
   .wizard-questions {
     font-size: 14px;
     color: #000000;
     margin-bottom: 9px;
-}
+  }
 }
 .box-input-type-container {
   display: flex;
   flex-wrap: wrap;
-  &.yes-no{ 
-    .box-input-type-option{
+  &.yes-no {
+    .box-input-type-option {
       flex: 0 0 12%;
       max-width: 12%;
-      .box-input-label { 
+      .box-input-label {
         align-items: center;
       }
     }
-    
-
-    }
+  }
   .box-input-type-option {
     -webkit-box-flex: 0;
     flex: 0 0 33.33333333333333%;
@@ -213,14 +209,15 @@ body {
     display: inline-flex;
     padding-bottom: 10px;
     padding-right: 10px;
-   
-    .box-input{
+
+    .box-input {
       display: none;
-      &:checked + .box-input-label , &:hover + .box-input-label {
+      &:checked + .box-input-label,
+      &:hover + .box-input-label {
         background-color: #645df9;
-        color:#ffffff;
-        .options{
-          color:#ffffff;
+        color: #ffffff;
+        .options {
+          color: #ffffff;
         }
       }
     }
@@ -235,7 +232,7 @@ body {
       flex-direction: column;
       justify-content: center;
       height: 100%;
-     
+
       .options {
         font-size: 16px;
         font-weight: 500;
@@ -250,65 +247,63 @@ body {
     }
   }
 }
-.input-dropdown{
-  background: #E1EBFF!important;
-  border-bottom: 1px solid #645DF9!important;
-  border-radius: 0px!important;
-  color: #645DF9!important;
+.input-dropdown {
+  background: #e1ebff !important;
+  border-bottom: 1px solid #645df9 !important;
+  border-radius: 0px !important;
+  color: #645df9 !important;
   font-size: 18px;
   text-align: left;
   padding: 8px 16px;
   height: calc(1.5em + 0.75rem + 13px);
-  i{
-    color: #645DF9;
+  i {
+    color: #645df9;
     margin-right: 10px;
   }
 }
-.option-img{
+.option-img {
   width: 34px;
   height: 34px;
 }
-.option-content{
-  h5{
+.option-content {
+  h5 {
     font-size: 16px;
     color: #000000;
     margin-bottom: 0px;
     line-height: 13px;
-  
   }
-  small{
-    color:#828894;
+  small {
+    color: #828894;
     font-size: 12px;
   }
- 
 }
-.input-border-bottom{
-color:#645DF9;
-padding: 6px 16px;
-border: 0px;
-border-bottom: 1px solid #645DF9;
-border-radius: 0px;
-background-color: #E1EBFF;
-height: calc(1.5em + 0.75rem + 14px);
-&:focus{
-  border-bottom: 1px solid #645DF9;
-border-radius: 0px;
-background-color: #E1EBFF;
-color:#645DF9;
+.input-border-bottom {
+  color: #645df9;
+  padding: 6px 16px;
+  border: 0px;
+  border-bottom: 1px solid #645df9;
+  border-radius: 0px;
+  background-color: #e1ebff;
+  height: calc(1.5em + 0.75rem + 14px);
+  &:focus {
+    border-bottom: 1px solid #645df9;
+    border-radius: 0px;
+    background-color: #e1ebff;
+    color: #645df9;
+  }
 }
-}
-.form-control:focus{
+.form-control:focus {
   box-shadow: none;
 }
 // We need to use ::ng-deep to overcome view encapsulation
 .custom-slider {
-  &.min-max-range{
-    .ngx-slider-selection{
-      background: #001d4a!important;
+  &.min-max-range {
+    .ngx-slider-selection {
+      background: #001d4a !important;
     }
     .ngx-slider {
       .ngx-slider-bar {
-        background: #E6E6E6;
+        background: #e6e6e6;
       }
     }
   }
@@ -374,20 +369,19 @@ color:#645DF9;
     }
   }
 }
-.dropdown-item.active, .dropdown-item:active { 
+.dropdown-item.active,
+.dropdown-item:active {
   background-color: #00000003;
 }
-.medium-text{
+.medium-text {
   font-size: 17px;
-color:#000000;
-margin-bottom: 0px;
+  color: #000000;
+  margin-bottom: 0px;
 }
-.small-text{
+.small-text {
   font-size: 13px;
-  color:#6E6E6E;
+  color: #6e6e6e;
 }
-
-
 
 /* The container */
 .selecet-box {
@@ -428,7 +422,7 @@ margin-bottom: 0px;
 
 /* When the radio button is checked, add a blue background */
 .selecet-box input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -445,10 +439,10 @@ margin-bottom: 0px;
 
 /* Style the indicator (dot/circle) */
 .selecet-box .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
