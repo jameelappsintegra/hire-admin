@@ -16,6 +16,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { FormsModule } from '@angular/forms';
+import { GeneralSettingsComponent } from './view/general-settings/general-settings.component';
+import { JobDescriptionComponent } from './view/job-openings/job-description/job-description.component';
 
 import { TheJobComponent } from './view/job-openings/job-openings-create/the-job/the-job.component';
 import { WorkFlowComponent } from './view/job-openings/job-openings-create/work-flow/work-flow.component';
@@ -35,6 +37,8 @@ import { FindCandidateComponent } from './view/job-openings/job-openings-create/
     WorkFlowComponent,
     ApplicationFormComponent,
     FindCandidateComponent,
+    GeneralSettingsComponent,
+    JobDescriptionComponent,
   ],
   imports: [
     BrowserModule,
