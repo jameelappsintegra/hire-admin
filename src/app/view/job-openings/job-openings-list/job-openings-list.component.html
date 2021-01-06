@@ -54,18 +54,49 @@
             >
           </div>
           <div class="end-date">
-            <div class="progress"></div>
+            <circle-progress
+              [percent]="50"
+              [radius]="20"
+              [outerStrokeWidth]="2"
+              [innerStrokeWidth]="1"
+              [outerStrokeColor]="'#39B54A'"
+              [innerStrokeColor]="'#C7E596'"
+              [showUnits]="false"
+              [showSubtitle]="false"
+              [showInnerStroke]="false"
+              [animation]="true"
+              [animationDuration]="300"
+            ></circle-progress>
             <div class="date-container">
               <span class="end-date-title">End Date</span>
               <span class="date">{{ item.endDate }}</span>
             </div>
           </div>
           <div class="recruitment-status">
-            <div class="progress-indicator screening-outline">12</div>
-            <div class="progress-indicator submissions-outline">12</div>
-            <div class="progress-indicator interview-outline">12</div>
-            <div class="progress-indicator offered-outline">12</div>
-            <div class="progress-indicator hired-outline">12</div>
+            <div
+              class="progress-indicator screening-outline"
+              [tooltip]="Screening"
+            >
+              12
+            </div>
+            <div
+              class="progress-indicator submissions-outline"
+              [tooltip]="Submissions"
+            >
+              12
+            </div>
+            <div
+              class="progress-indicator interview-outline"
+              [tooltip]="Interview"
+            >
+              12
+            </div>
+            <div class="progress-indicator offered-outline" [tooltip]="Offered">
+              12
+            </div>
+            <div class="progress-indicator hired-outline" [tooltip]="Hired">
+              12
+            </div>
           </div>
           <div class="communication">
             <div class="mail">

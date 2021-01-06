@@ -12,6 +12,7 @@ import { JobOpeningsCreateComponent } from './view/job-openings/job-openings-cre
 import { JobOpeningsLandingComponent } from './view/job-openings/job-openings-landing/job-openings-landing.component';
 import { GeneralSettingsComponent } from './view/general-settings/general-settings.component';
 import { JobDescriptionComponent } from './view/job-openings/job-description/job-description.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,16 @@ import { JobDescriptionComponent } from './view/job-openings/job-description/job
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+    })
+
   ],
   providers: [],
   bootstrap: [AppComponent]
